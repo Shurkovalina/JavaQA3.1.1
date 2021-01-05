@@ -1,5 +1,13 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+
 public class Radio {
     private int numberCurrentRadio;
     private int minNumberCurrentRadio;
@@ -7,66 +15,6 @@ public class Radio {
     private int soundVolume;
     private int minSoundVolume;
     private int maxSoundVolume;
-
-    public Radio(int numberCurrentRadio, int minNumberCurrentRadio, int maxNumberCurrentRadio, int soundVolume, int minSoundVolume, int maxSoundVolume) {
-        this.numberCurrentRadio = numberCurrentRadio;
-        this.minNumberCurrentRadio = minNumberCurrentRadio;
-        this.maxNumberCurrentRadio = maxNumberCurrentRadio;
-        this.soundVolume = soundVolume;
-        this.minSoundVolume = minSoundVolume;
-        this.maxSoundVolume = maxSoundVolume;
-    }
-
-    public Radio() {
-    }
-
-    public int getMinNumberCurrentRadio() {
-        return minNumberCurrentRadio;
-    }
-
-    public void setMinNumberCurrentRadio(int minNumberCurrentRadio) {
-        this.minNumberCurrentRadio = minNumberCurrentRadio;
-    }
-
-    public int getMaxNumberCurrentRadio() {
-        return maxNumberCurrentRadio;
-    }
-
-    public void setMaxNumberCurrentRadio(int maxNumberCurrentRadio) {
-        this.maxNumberCurrentRadio = maxNumberCurrentRadio;
-    }
-
-    public int getMinSoundVolume() {
-        return minSoundVolume;
-    }
-
-    public void setMinSoundVolume(int minSoundVolume) {
-        this.minSoundVolume = minSoundVolume;
-    }
-
-    public int getMaxSoundVolume() {
-        return maxSoundVolume;
-    }
-
-    public void setMaxSoundVolume(int maxSoundVolume) {
-        this.maxSoundVolume = maxSoundVolume;
-    }
-
-    public int getNumberCurrentRadio() {
-        return numberCurrentRadio;
-    }
-
-    public void setNumberCurrentRadio(int numberCurrentRadio) {
-        this.numberCurrentRadio = numberCurrentRadio;
-    }
-
-    public int getSoundVolume() {
-        return soundVolume;
-    }
-
-    public void setSoundVolume(int soundVolume) {
-        this.soundVolume = soundVolume;
-    }
 
     public void nextNumberCurrentRadio() {
         if (numberCurrentRadio < maxNumberCurrentRadio) {
